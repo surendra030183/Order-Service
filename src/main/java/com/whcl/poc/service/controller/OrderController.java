@@ -23,6 +23,15 @@ public class OrderController {
 	
 	@PostMapping("/api/v1.0/order/create")
 	public ResponseEntity<Order> createOrder(@RequestBody Order order) {
+		System.out.println("++++++++++++++++++++++++");
+		System.out.println("++++++++++++++++++++++++");
+		System.out.println("++++++++++++++++++++++++");
+		System.out.println("++++++++++++++++++++++++");
+		System.out.println("++++++++++++++++++++++++");
+		System.out.println("++++++++++++++++++++++++");
+		System.out.println("++++++++++++++++++++++++");
+		System.out.println("++++++++++++++++++++++++");
+
 		return ResponseEntity.ok(orderService.createOrder(order));
 	}
 	

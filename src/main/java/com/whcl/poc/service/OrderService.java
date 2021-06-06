@@ -22,8 +22,8 @@ import com.whcl.poc.service.repository.OrderRepository;
 public class OrderService {
 
 	//TODO, these constants will moved to as enum or will be used from table
-	private static final String ORDERID = "orderid";
-	private static final String DRIVERID = "driverid";
+	private static final String ORDERID = "orderId";
+	private static final String DRIVERID = "driverId";
 	private static final String CANCELLED = "CANCELLED";
 	private static final String FAILED_TO_CANCEL_ORDER = "FAILED TO CANCEL ORDER";
 	private static final String DRIVER_ASSIGNED_TO_AN_ORDER_SUCCESSFULLY = "Driver assigned to an order successfully";
@@ -191,7 +191,7 @@ public class OrderService {
 		Integer driverid = map.get(DRIVERID);
 		
 		logger.info("orderid:"+orderid+", assigning driver:"+driverid+" for delivery");
-		if(driverid!=null && orderid !=null) {
+		if(driverid!=null) {
 			Order order=findOrderByOrderId(orderid);
 			if(order != null) {
 				order.setDriverId(driverid);
